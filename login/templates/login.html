@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <div style="background-color: aliceblue;text-align:center;width:60%;height:80%;margin:0 auto">
+        <h2>欢迎你，游客！</h2>
+          <form method="post" action="/index/login/">
+              {% csrf_token %}
+            <fieldset>
+                <legend>Login information:</legend>
+                Username: <input name="username" type="text" size="30" placeholder="请输入用户名"><br>
+                Password: <input name="pwd" type="password" size="30" placeholder="请输入密码"><br>
+                <br>
+                <input type="radio" name="agreement" value="Yes">我已阅读并同意<abbr title="然而并没有" >服务协议</abbr>和<abbr title="当然也没有" >隐私服务政策</abbr>
+                <br><br><input type="submit" value="提交"><br>
+                <br><span style="color:red">{{ error_msg }}</span>
+            </fieldset>
+          </form>
+        <br><br>
+        <form>
+            <input type="button" value="注册" onclick="if(confirm('确定跳转？')){location.href='/index/register/'}">
+        </form>
+
+    </div>
+</body>
+</html>

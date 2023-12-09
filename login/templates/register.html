@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <div style="background-color: aliceblue;text-align:center;width:60%;height:80%;margin:0 auto">
+          <form method="post" action="/index/register/">
+              {% csrf_token %}
+              <fieldset>
+              <legend>Register information:</legend>
+              Username: <input name="username" type="text" size="30" placeholder="请输入用户名"><br>
+              Password: <input name="pwd" type="password" size="30" placeholder="请输入密码"><br>
+                  Confirm Password: <input name="conf_pwd" type="password" size="30" placeholder="确认密码"><br>
+                  *Telephone Number: <input name="phone_number" type="password" size="30" placeholder="选填"><br>
+              sex: <select name="sex">
+              <option value=0>男</option>
+              <option value=1>女</option>
+              <option value=2>LGBT</option>
+              <option value=3>武装直升机</option>
+              </select><br>
+                  <span style="color:red"> {{ error_msg }}</span><br>
+              <input type="radio" name="agreement" value="Yes">我已阅读并同意<abbr title="然而并没有" >服务协议</abbr>和<abbr title="当然也没有" >隐私服务政策</abbr>
+              <br><br><input type="submit" value="提交">
+            </fieldset>
+          </form>
+    </div>
+</body>
+</html>

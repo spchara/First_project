@@ -1,0 +1,31 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>那你能帮帮我吗</title>
+    <style >
+        h1 {color: #843737;}
+    </style>
+</head>
+<body>
+    <script type="text/javascript">alert("登录成功");</script>
+    <div style="background-color: aliceblue;text-align:center;width:60%;margin:0 auto">
+        <span style="color:brown">{{ login_static }}</span>
+        <form>
+            <input type="button" value="注销" onclick="if(confirm('确定注销？')){location.href='/index/login/'}">
+        </form>
+        <h1 style="text-align: center;">你能帮帮我吗</h1>
+        <hr>
+        <a id="c1">我是个傻子</a>
+        <p>那你能帮帮我吗</p><br>
+        <img alt="xueliuchenghe" src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" width="20%" height="20%" style="align-content: center"/>
+        <br>
+        <form target="_blank" method="get" action="https://www.baidu.com/s">
+            <input type="text" placeholder="帮你百度" name="word" class="text" size="50"/>
+            <input type="submit" value="搜索" >
+            <p style="color:rgba(0,0,0,0.38)">本人已与百度达成合作，可以直接在框内进行百度搜索</p>
+        </form>
+    </div>
+    </body>
+</html>
